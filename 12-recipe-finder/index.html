@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Recipe Finder App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fa-solid fa-utensils"></i>Recipe Finder</h1>
+        <p>Món ăn ngon trên toàn thế giới</p>
+      </header>
+
+      <p class="api-link">
+        Dữ liệu được lấy từ
+        <a href="https://www.themealdb.com/api.php" target="_blank"
+          >TheMealDB</a
+        >
+      </p>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Tìm kiếm món ăn bạn muốn nấu..."
+        />
+        <button id="search-btn">Tìm kiếm</button>
+      </div>
+
+      <div id="error-container" class="hidden">
+        <p>No meals found. Try another search term!</p>
+      </div>
+
+      <div id="result-heading"></div>
+
+      <div id="meals" class="meals-container">
+        <!-- mẫu thử -->
+        <!-- <div class="meal" data-meal-id="52951">
+          <img
+            src="https://www.themealdb.com/images/media/meals/1529444113.jpg"
+            alt="General Tsos Chicken"
+          />
+          <div class="meal-info">
+            <h3 class="meal-title">General Tsos Chicken</h3>
+            <div class="meal-category">Chicken</div>
+          </div>
+        </div> -->
+        <!-- =========== -->
+      </div>
+
+      <div id="meal-details" class="hidden">
+        <button id="back-btn">
+          <i class="fas fa-arrow-left"></i>Back to recipes
+        </button>
+
+        <div class="meal-details-content"></div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
